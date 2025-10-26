@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherMagic - Modern Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>WeatherMagic</h1>
+            <p>Your modern weather companion with real-time updates</p>
+        </div>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+
+            <div class="recent-searches">
+                <h3><i class="fas fa-clock"></i> Recent Searches</h3>
+                <div class="search-tags">
+                    <div class="search-tag">New York</div>
+                    <div class="search-tag">London</div>
+                    <div class="search-tag">Tokyo</div>
+                    <div class="search-tag">Paris</div>
+                    <div class="search-tag">Sydney</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="current-weather">
+            <div class="weather-main">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h2 id="city-name">New York</h2>
+                </div>
+                <div class="date-time" id="date-time">Monday, June 12, 2023 | 10:30 AM</div>
+                <div class="temperature" id="temperature">24°C</div>
+                <div class="description" id="description">Sunny</div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <div class="detail-label">Wind Speed</div>
+                        <div class="detail-value" id="wind-speed">5 km/h</div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <div class="detail-label">Humidity</div>
+                        <div class="detail-value" id="humidity">65%</div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-temperature-low"></i>
+                        <div class="detail-label">Feels Like</div>
+                        <div class="detail-value" id="feels-like">26°C</div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <div class="detail-label">Pressure</div>
+                        <div class="detail-value" id="pressure">1013 hPa</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-visual">
+                <div class="weather-icon">
+                    <i class="fas fa-sun" id="weather-icon"></i>
+                </div>
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <i class="fas fa-eye"></i>
+                        <div class="detail-label">Visibility</div>
+                        <div class="detail-value" id="visibility">10 km</div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-cloud"></i>
+                        <div class="detail-label">Cloudiness</div>
+                        <div class="detail-value" id="cloudiness">20%</div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-sun"></i>
+                        <div class="detail-label">UV Index</div>
+                        <div class="detail-value" id="uv-index">5</div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <div class="detail-label">Wind Direction</div>
+                        <div class="detail-value" id="wind-direction">NE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="forecast-section">
+            <h3 class="section-title"><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h3>
+            <div class="forecast-container" id="forecast">
+                <!-- Forecast items will be added here dynamically -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Created with <i class="fas fa-heart" style="color: #ef4444;"></i> by <a
+                    href="https://github.com/codewithuzma" target="_blank">CodeWithUzma</a></p>
+        </div>
+    </div>
+<script src="script.js"></script>
+   
+</body>
+
+</html>
